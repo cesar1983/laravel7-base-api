@@ -13,6 +13,8 @@ return [
     |
     */
 
+    'invalid_data'         => 'Os dados enviados são inválidos.',
+
     'accepted'             => 'O campo :attribute deve ser aceito.',
     'active_url'           => 'O campo :attribute não é uma URL válida.',
     'after'                => 'O campo :attribute deve ser uma data posterior a :date.',

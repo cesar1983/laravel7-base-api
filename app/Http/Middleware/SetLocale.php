@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\App;
 
 class SetLocale
 {
@@ -25,7 +26,7 @@ class SetLocale
             $locale = config('app.locale');
         }
 
-        app()->setLocale($locale);
+        App::setLocale($locale);
 
         $response = $next($request);
 

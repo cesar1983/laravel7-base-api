@@ -15,5 +15,8 @@ return [
 
     'failed' => 'Essas credenciais não foram encontradas em nossos registros.',
     'throttle' => 'Muitas tentativas de login. Tente novamente em :seconds segundos.',
+    'unauthorized' => 'Não autorizado.',
+    'create_user_success' => 'Usuário criado com sucesso!',
+    'logout_success' => 'Log out realizado com sucesso!'
 
 ];

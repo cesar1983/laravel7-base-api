@@ -39,7 +39,7 @@ class AuthController extends Controller
         $token->save();
 
         return response()->json([
-            'message' => 'Successfully created user!',
+            'message' => __('auth.create_user_success'),
             'access_token' => $tokenResult->accessToken,
             'token_type' => 'Bearer',
             'expires_at' => Carbon::parse(
@@ -72,11 +72,11 @@ class AuthController extends Controller
 
         if(!Auth::attempt($credentials))
             return response()->json([
-                'message' => 'Unauthorized'
+                'message' => __('auth.unauthorized')
             ], Response::HTTP_UNAUTHORIZED);
 
         if( !Auth::attempt($credentials) ){
-            return response(['message' => "Invalid login credentials"]);
+            return response(['message' => __('auth.failed')]);
         }
 
         $user = $request->user();
@@ -110,7 +110,7 @@ class AuthController extends Controller
         $request->user()->token()->revoke();
 
         return response()->json([
-            'message' => 'Successfully logged out'
+            'message' => __('auth.logout_success')
         ]);
     }
 
